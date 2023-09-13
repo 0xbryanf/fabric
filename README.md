@@ -17,17 +17,53 @@ The Fabric application stack has five layers:
 ### For Linux
 
 #### Git
-Install the latest version of git if it is not already installed:
-
+Install the latest version of git if it is not already installed
 ```sudo apt-get install git```
 
+Check the version of the installed git.
+```git --version```
 
 #### cURL
+Install the latest version of cURL if it is not already installed.
+```sudo apt-get install curl```
+
+Check the version of the installed cURL.
+```curl --version```
+
 #### Docker
-#### Docker Compose
+Install the latest version of Docker if it is not already installed.
+```sudo apt-get -y install docker-compose```
+
+Check the version of the Docker installed.
+```docker --version```
+
+Check the version of the docker-compose installed.
+```docker-compose --version```
+
 #### Go
+Install the latest version of Go if it is not already installed.
+```sudo apt-get golang-go```
+
+Check the version of Go installed.
+```go version```
+
 #### JQ
-#### Git For Windos (Optional)
+Install the latest version of Jq if it is not already installed.
+```sudo apt-get install jq```
 
+Check the version of Jq installed.
+```jq --version```
 
-#### Git
+#### Git For Windows (Optional)
+Although not required, if you do decide to install Git on Windows and manage the Fabric repositories natively(as opposed to within WSL2 and its Git installation), then make sure you configure Git as follows:
+
+Update the following 'git' configurations:
+```git config --global core.autocrlf false```
+```git config --global core.longpaths true```
+
+You can check the setting of these parameters with the following commands:
+```git config --get core.autocrlf```
+```git config --get core.longpaths```
+
+These output from these commands should be false and true respectively.
+
